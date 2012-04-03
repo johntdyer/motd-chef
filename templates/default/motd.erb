@@ -9,7 +9,7 @@ ___  _________  ___ ____  ____ |  | _____ \_ |__   ______
 <%= "IP Address:\t#{@ipaddress}" %>
 <%= "Host:\t\t#{@hostname}" %>
 
-"With great power comes great responsibility [so don't screw up, we will beat you without mercy]"
+<%= node[:motd][:message] %>
 
 ------------------------------------------------
 
