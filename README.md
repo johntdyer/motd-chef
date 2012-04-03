@@ -27,4 +27,4 @@ default[:motd][:message] = "someting to say"
 Usage
 =====
 
-Pretty self explainity, just add to your run list and set the attributes
+Pretty self-explanatory, just add to your run list and set the attributes
