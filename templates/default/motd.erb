@@ -10,11 +10,11 @@ ___  _________  ___ ____  ____ |  | _____ \_ |__   ______
 <%= "Host:\t\t#{@hostname}" %>
 <% if node.attribute?('ec2') -%>
 ----- AWS Data -----
-<%= "\t- Instance ID:\t\t#{node.ec2.instance_id}" %>
-<%= "\t- Instance Type:\t\t#{node.ec2.instance_type}" %>
-<%= "\t- Availablity Zone:\t\t#{node.ec2.placement_availability_zone}" %>
-<%= "\t- Security Group(s):\t\t#{node.ec2.placement_availability_zone}" %>
-<%= "\t- AMI ID:\t\t#{node.ec2.ami_id}" %>
+<%= "  - Instance ID:\t#{node.ec2.instance_id}" %>
+<%= "  - Instance Type:\t#{node.ec2.instance_type}" %>
+<%= "  - Availablity Zone:\t#{node.ec2.placement_availability_zone}" %>
+<%= "  - Security Group(s):\t#{node.ec2.security_groups.join(",")}" %>
+<%= "  - AMI ID:\t\t#{node.ec2.ami_id}" %>
 <% end -%>
 
 <%= node[:motd][:message] %>
