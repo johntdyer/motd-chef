@@ -10,7 +10,7 @@
 # gem_package "artii" do
 #   options(:rdoc => false, :ri => false)
 # end
-# 
+#
 # script "write motd" do
 #   interpreter "bash"
 #   cwd "/tmp"
@@ -25,6 +25,6 @@ template "/etc/motd" do
   variables({
     :hostname   => node.fqdn,
     :ipaddress  => node.ipaddress,
-    :roles      => node.roles.join(", ")
+    :run_list   => node.run_list.to_s
   })
 end
